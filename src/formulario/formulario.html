@@ -1,0 +1,176 @@
+  <!-- ══════════════════════════════════════
+       FORMULARIO — MUEBLE A MEDIDA
+  ══════════════════════════════════════ -->
+<section class="custom-form" id="medida">
+    <div class="form-sidebar">
+        <div class="form-brand">
+        <span class="logo-main sm">PIEZA</span>
+        <span class="logo-sub sm">ESTUDIO</span>
+        <button class="hamburger-white">☰</button>
+        </div>
+        <nav class="form-breadcrumb">
+        <span>Inicio</span>
+        <span class="bc-sep">›</span>
+        <span class="bc-active">Muebles a medida</span>
+        </nav>
+
+        <div class="form-intro">
+        <p class="form-tag">CUÉNTANOS TU IDEA</p>
+        <h2 class="form-title">Solicita tu mueble<br>a medida</h2>
+        <p class="form-desc">Completa el formulario y te enviaremos una propuesta de diseño y cotización sin compromiso.</p>
+        </div>
+
+        <!-- STEPS -->
+        <div class="steps-indicator">
+        <div class="step-dot active">
+            <span class="dot-num">1</span>
+            <span class="dot-label">Información</span>
+        </div>
+        <div class="steps-line"></div>
+        <div class="step-dot">
+            <span class="dot-num">2</span>
+            <span class="dot-label">Detalles</span>
+        </div>
+        <div class="steps-line"></div>
+        <div class="step-dot">
+            <span class="dot-num">3</span>
+            <span class="dot-label">Envío</span>
+        </div>
+        </div>
+
+        <!-- FORM BODY -->
+        <form class="medida-form"> <!-- (ngSubmit)="onSubmit()" #contactForm="ngForm"> -->
+
+        <!-- STEP 1 -->
+        <div class="form-section">
+            <h3 class="fs-title">1. Información básica</h3>
+
+            <div class="field-group">
+            <label class="field-label">Nombre completo <span class="req">*</span></label>
+            <input type="text" class="field-input" placeholder="Tu nombre" name="nombre" ngModel required />
+            </div>
+
+            <div class="field-group">
+            <label class="field-label">Email <span class="req">*</span></label>
+            <input type="email" class="field-input" placeholder="tu&#64;email.com" name="email" ngModel required />
+            </div>
+
+            <div class="field-group">
+            <label class="field-label">Teléfono / WhatsApp <span class="req">*</span></label>
+            <input type="tel" class="field-input" placeholder="55 1234 5678" name="telefono" ngModel required />
+            </div>
+
+            <div class="field-group">
+            <label class="field-label">¿Dónde te encuentras?</label>
+            <select class="field-input field-select" name="ciudad" ngModel>
+                <option value="">Selecciona tu ciudad</option>
+                <option>Ciudad de México</option>
+                <option>Guadalajara</option>
+                <option>Monterrey</option>
+                <option>Puebla</option>
+                <option>Otra ciudad</option>
+            </select>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="form-section">
+            <h3 class="fs-title">2. Sobre tu mueble</h3>
+
+            <div class="field-group">
+            <label class="field-label">¿Qué tipo de mueble necesitas? <span class="req">*</span></label>
+            <select class="field-input field-select" name="tipo_mueble" ngModel required>
+                <option value="">Selecciona una opción</option>
+                <option>Mesa de centro</option>
+                <option>Silla / Sillón</option>
+                <option>Barra / Banco</option>
+                <option>Estante / Librero</option>
+                <option>Cama / Cabecera</option>
+                <option>Lámpara / Decoración</option>
+                <option>Otro</option>
+            </select>
+            </div>
+
+            <div class="field-group">
+            <label class="field-label">Cuéntanos tu idea <span class="req">*</span></label>
+            <textarea
+                class="field-input field-textarea"
+                placeholder="Describe el mueble que imaginas, sus funciones, estilo, materiales que te gustan, etc."
+                name="idea"
+                ngModel
+                required
+                rows="5"
+            ></textarea>
+            </div>
+
+            <div class="field-group">
+            <label class="field-label">Dimensiones aproximadas (Ancho x Alto x Profundidad)</label>
+            <input type="text" class="field-input" placeholder="Ej. 120 x 75 x 45 cm" name="dimensiones" ngModel />
+            </div>
+
+            <div class="field-group">
+            <label class="field-label">¿Tienes alguna referencia o inspiración? (Sube imágenes)</label>
+            <div class="file-drop" (click)="fileInput.click()">
+                <input #fileInput type="file" accept="image/*" multiple style="display:none" />
+                <div class="file-drop-icon">⬆</div>
+                <p>Subir imágenes</p>
+                <p class="file-note">JPG, PNG (máx. 10MB)</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="form-section">
+            <h3 class="fs-title">3. Envío de propuesta</h3>
+
+            <div class="field-group">
+            <label class="field-label">¿Cómo te gustaría recibir la propuesta? <span class="req">*</span></label>
+            <select class="field-input field-select" name="canal" ngModel required>
+                <option value="">Selecciona una opción</option>
+                <option>Correo electrónico</option>
+                <option>WhatsApp</option>
+                <option>Ambos</option>
+            </select>
+            </div>
+
+            <div class="field-group checkbox-group">
+            <input type="checkbox" id="privacy" name="privacidad" ngModel required />
+            <label for="privacy" class="check-label">
+                Acepto el tratamiento de mis datos personales. <span class="req">*</span>
+            </label>
+            </div>
+
+            <button type="submit" class="btn-submit">ENVIAR SOLICITUD</button>
+
+            <p class="form-note">◎ Te contactaremos en menos de 24 horas.</p>
+        </div>
+
+        </form>
+
+        <!-- SIDEBAR BOTTOM CARDS -->
+        <div class="sidebar-cards">
+        <div class="s-card">
+            <span class="s-card-icon">👤</span>
+            <div>
+            <strong>Asesoría personalizada</strong>
+            <p>Te ayudamos a materializar tu idea.</p>
+            </div>
+        </div>
+        <div class="s-card">
+            <span class="s-card-icon">📄</span>
+            <div>
+            <strong>Propuesta sin compromiso</strong>
+            <p>Cotización clara y detallada.</p>
+            </div>
+        </div>
+        <div class="s-card">
+            <span class="s-card-icon">⚙</span>
+            <div>
+            <strong>Diseño 100% personalizado</strong>
+            <p>Hecho para ti, hecho para durar.</p>
+            </div>
+        </div>
+        </div>
+
+    </div><!-- /form-sidebar -->
+</section>
