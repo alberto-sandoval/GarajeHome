@@ -1,0 +1,25 @@
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <header class="nav">
+    <a href="#" class="nav-logo">
+      <span class="logo-main">Garaje Home</span>
+      <span class="logo-sub">Taller de diseño</span>
+    </a>
+    <nav class="nav-menu">
+      <a class="nav-link" [routerLink]="['/inicio']" >INICIO</a>
+      <a href="#productos" class="nav-link">PRODUCTOS</a>
+      <a class="nav-link" [routerLink]="['/formulario']">A MEDIDA</a>
+      <a href="#nosotros" class="nav-link">SOBRE NOSOTROS</a>
+      <a href="#contacto" class="nav-link">CONTACTO</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Cuenta">&#9711;</button>
+      <button class="icon-btn" aria-label="Buscar">&#9906;</button>
+      <button class="icon-btn cart-btn" aria-label="Carrito">
+        &#9752;
+        <span class="cart-badge">0</span>
+      </button>
+    </div>
+    <button class="hamburger" aria-label="Menú">&#9776;</button>
+  </header>
