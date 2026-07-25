@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Footer } from '../footer/footer';
 import { RouterModule } from '@angular/router';
+import { Productos } from '../productos/productos';
 
 @Component({
   selector: 'app-hero',
-  imports: [RouterModule, Footer],
+  imports: [RouterModule, Footer, Productos],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
